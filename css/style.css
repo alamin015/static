@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav bar design start  */
+
+nav{
+    width: 100%;
+    padding: 15px 0px;
+    background: #fafafa;
+}
+
+nav .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navBar .navBar-left a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .navBar .navBar-right .right-menu{}
+
+nav .navBar .navBar-right .right-menu li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav .navBar .navBar-right .right-menu li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #1d1d1d;
+
+}
+/* FOR MOBILE MENU CSS START HERE  */
+
+.mobile-nav{
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: #fafafa;
+    top: 0;
+    left: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.mobile-nav.active{
+    left: 0;
+}
+.mobile-nav .mobile-menu li{
+    list-style-type: none;
+    display: block;
+    margin: 15px 0px;
+    
+}
+.mobile-nav .mobile-menu li a{
+    text-decoration: none;
+    color: #1d1d1d;
+}
+/* FOR MOBILE MENU CSS END  */
+
+
+/* Nav Icon design  */
+
+nav .navBar-right .navIcon{
+    display: none;
+}
+nav .navBar-right .navIcon span{
+    cursor: pointer;
+}
+
+.navBar-right .navIcon span i{
+    font-size: 25px;
+}
+.navIcon #iconCross{
+    display: none;
+}
+
+
+
+/* Responsive design  */
+
+@media screen and (max-width: 992px) {
+    nav .navBar .navBar-right .right-menu{
+        display: none;
+    }
+
+    nav .navBar-right .navIcon{
+        display: block;
+    }
+}
